@@ -24,4 +24,22 @@
     </style>
 </head>
 <body>
-<iframe src="https://0bc1-2601-603-202-8940-7996-5ff4-c1f2-e6e7.ngrok-free.app/" width="100%" height="600px" frameborder="0"></iframe>
+    <div id="iframeContainer">
+        <iframe id="externalWebsite" src="https://example.com" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        // Wait for the iframe to load
+        document.getElementById('externalWebsite').addEventListener('load', function() {
+            // Access the iframe content document
+            var iframeDocument = this.contentWindow.document;
+            
+            // Apply styles to the body of the iframe content
+            if (iframeDocument.body) {
+                iframeDocument.body.style.backgroundColor = '#133121';
+                iframeDocument.body.style.color = '#fff'; // Optionally set text color
+            }
+        });
+    </script>
+</body>
+</html>
