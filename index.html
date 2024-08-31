@@ -53,6 +53,12 @@
         margin: 1rem 0;
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .project-item:hover {
+        background-color: #f0f0f0;
     }
     footer {
         background: #333;
@@ -74,32 +80,30 @@
     <section id="about" class="intro">
         <img src="profile.jpg" alt="Profile Picture" class="profile-img">
         <h1>Brennan LM</h1>
-        <p>Im only 15, you can hire me in a few years :P</p>
+        <p>I'm only 15; you can hire me in a few years :P</p>
     </section>
 
     <section id="projects" class="projects">
         <h2>Projects</h2>
-        <div class="project-item">
+        <div class="project-item" onclick="window.location.href='aegis.html'">
             <h3>aEgis</h3>
             <p>A userscript to make the Edgenuity website more accessible.</p>
-            <a href="aegis.html">More Info</a>
         </div>
-        <div class="project-item">
+        <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/Hand2Mouse'">
             <h3>Hand2Mouse (WIP)</h3>
-            <p>A python program that tracks your middle finger and sets your mouse cursor accordingly.</p>
-            <a href="https://github.com/PCTSxYupman/Hand2Mouse">(Github)</a>
+            <p>A Python program that tracks your middle finger and sets your mouse cursor accordingly.</p>
         </div>
-        <div class="project-item">
+        <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/AreYouWorking/'">
             <h3>AreYouWorking</h3>
-            <p>A program that tracks your face and makes sure your looking at your screen, and if you arent it pops up a picture on a bright window and tells you to get back to work.</p>
-            <a href="https://github.com/PCTSxYupman/AreYouWorking/">(Github)</a>
+            <p>A program that tracks your face and makes sure you're looking at your screen. If not, it pops up a picture on a bright window and tells you to get back to work.</p>
         </div>
     </section>
 
     <section id="contact" class="contact">
         <h2>Contact</h2>
         <p>Email: BrennanLM@btlm.xyz</p>
-        <p>GitHub: github.com/PCTSxYupman</p>
+        <p>GitHub: <a href="https://github.com/PCTSxYupman">PCTSxYupman</a></p>
+    </section></a></p>
     </section>
 </div>
 
