@@ -107,6 +107,15 @@
             width: 100%;
         }
     </style>
+        <script>
+        // Detect mobile devices using User-Agent string
+        window.onload = function() {
+            var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = 'mobile.html';
+            }
+        };
+    </script>
 </head>
 <body>
 
