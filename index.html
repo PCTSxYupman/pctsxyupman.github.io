@@ -10,10 +10,10 @@
             background-color: #133121;
             background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
             background-size: 20px 20px;
+            margin: 0;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            margin: 0;
         }
 
         nav {
@@ -28,9 +28,19 @@
         }
 
         .container {
+            display: flex;
+            justify-content: space-between;
             width: 80%;
             margin: 2rem auto;
             flex: 1;
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .right.github-embed {
+            width: 25%; /* Resized to a quarter of the page */
         }
 
         .profile-img {
@@ -47,11 +57,11 @@
             color: #fff;
         }
 
-        .projects, .contact {
+        .projects {
             margin: 2rem 0;
         }
 
-        .projects h2, .contact h2, .contact p {
+        .projects h2 {
             color: #fff;
         }
 
@@ -79,13 +89,14 @@
                         inset -1px -1px 5px rgba(255, 255, 255, 0.4);
         }
 
-        .contact a {
-            color: #31131b;
-            text-decoration: none;
+        .github-embed {
+            margin-left: 2rem;
         }
 
-        .contact a:hover {
-            text-decoration: underline;
+        iframe.github-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         footer {
@@ -100,37 +111,36 @@
 <body>
 
 <div class="container">
-    <section id="about" class="intro">
-        <img src="profile.jpg" alt="Profile Picture" class="profile-img">
-        <h1>Brennan LM</h1>
-        <p>I'm only 15; you can hire me in a few years :P</p>
-    </section>
+    <div class="left">
+        <section id="about" class="intro">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Brennan LM</h1>
+            <p>I'm only 15; you can hire me in a few years :P</p>
+        </section>
 
-    <section id="projects" class="projects">
-        <h2>Projects</h2>
-        <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/IssueTracker'">
-    <h3>IssueTracker</h3>
-    <p>A flask python app to track bugs in programs you are working on.</p>
-    <!-- Embed PythonAnywhere page with scalable width -->
-    <iframe src="https://brennanschoolaccount.pythonanywhere.com/" 
-            style="width: 100%; height: 450px;" 
-            frameborder="0" allowfullscreen></iframe>
-</div>
-        <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/Hand2Mouse'">
-            <h3>Hand2Mouse (WIP)</h3>
-            <p>A Python program that tracks your middle finger and sets your mouse cursor accordingly.</p>
-        </div>
-        <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/AreYouWorking/'">
-            <h3>AreYouWorking</h3>
-            <p>A program that tracks your face and makes sure you're looking at your screen. If not, it pops up a picture on a bright window and tells you to get back to work.</p>
-        </div>
-    </section>
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/IssueTracker'">
+                <h3>IssueTracker</h3>
+                <p>A flask python app to track bugs in programs you are working on.</p>
+                <iframe src="https://brennanschoolaccount.pythonanywhere.com/" 
+                        style="width: 100%; height: 450px;" 
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/Hand2Mouse'">
+                <h3>Hand2Mouse (WIP)</h3>
+                <p>A Python program that tracks your middle finger and sets your mouse cursor accordingly.</p>
+            </div>
+            <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/AreYouWorking/'">
+                <h3>AreYouWorking</h3>
+                <p>A program that tracks your face and makes sure you're looking at your screen. If not, it pops up a picture on a bright window and tells you to get back to work.</p>
+            </div>
+        </section>
+    </div>
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>Email: BrennanLM@btlm.xyz</p>
-        <p>GitHub: <a href="https://github.com/PCTSxYupman">PCTSxYupman</a></p>
-    </section>
+    <div class="right github-embed">
+        <iframe src="https://github.com/PCTSxYupman?tab=repositories" class="github-frame" style="height: 1200px;"></iframe>
+    </div>
 </div>
 
 <footer>
