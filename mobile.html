@@ -63,21 +63,29 @@
         }
 
         .project-item {
-            background: #133129;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 5px;
-            border: 3px solid #133129;
-            color: #fff;
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2),
-                        inset 1px 1px 5px rgba(0, 0, 0, 0.1),
-                        inset -1px -1px 5px rgba(255, 255, 255, 0.3);
-            text-align: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease, box-shadow 0.3s ease;
-            outline: 5px solid #31131b;
-            outline-offset: -5px;
-        }
+    background: #133129;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 15px; /* More rounded corners */
+    border: 3px solid #133129;
+    color: #fff;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2),
+                inset 1px 1px 5px rgba(0, 0, 0, 0.1),
+                inset -1px -1px 5px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    outline: 5px solid orange; /* Updated to orange */
+    outline-offset: -5px;
+}
+
+.github-embed {
+    margin-left: 2rem;
+    border-radius: 15px; /* More rounded corners */
+    outline: 5px solid orange; /* Added orange outline */
+    outline-offset: -5px;
+}
+
 
         .project-item:hover {
             background-color: #1b3d2a;
