@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrennanLM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #133121;
+            background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        nav a {
+            color: #31131b;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 2rem auto;
+            flex: 1;
+        }
+
+        .left {
+            flex: 1;
+        }
+
+        .right.github-embed {
+            width: 25%; /* Resized to a quarter of the page */
+        }
+
+        .profile-img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+
+        .intro {
+            text-align: center;
+        }
+
+        .intro h1, .intro p {
+            margin: 0.5rem 0;
+            color: #fff;
+        }
+
+        .projects {
+            margin: 2rem 0;
+        }
+
+        .projects h2 {
+            color: #fff;
+        }
+
+        .project-item {
+            background: #133129;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            border: 3px solid #133129;
+            color: #fff;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2),
+                        inset 1px 1px 5px rgba(0, 0, 0, 0.1),
+                        inset -1px -1px 5px rgba(255, 255, 255, 0.3);
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            outline: 5px solid #31131b;
+            outline-offset: -5px;
+        }
+
+        .project-item:hover {
+            background-color: #1b3d2a;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3),
+                        inset 1px 1px 5px rgba(0, 0, 0, 0.2),
+                        inset -1px -1px 5px rgba(255, 255, 255, 0.4);
+        }
+
+        .github-embed {
+            margin-left: 2rem;
+        }
+
+        iframe.github-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        footer {
+            background: #133129;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            width: 100%;
+        }
+    </style>
+        <script>
+        // Detect mobile devices using User-Agent string
+        window.onload = function() {
+            var isMobile = /iPhone|iPad|iPod|Android|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = 'mobile.html';
+            }
+        };
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="left">
+        <section id="about" class="intro">
+            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Brennan LM</h1>
+            <p>I'm 16; message me about some freelance work! :P<br> BrennanLM@btlm.xyz</p>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>Projects</h2>
+            <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/IssueTracker'">
+                <h3>IssueTracker</h3>
+                <p>A flask python app to track bugs in programs you are working on.</p>
+                <iframe src="https://brennanschoolaccount.pythonanywhere.com/" 
+                        style="width: 100%; height: 450px;" 
+                        frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/Hand2Mouse'">
+                <h3>Hand2Mouse (WIP)</h3>
+                <p>A Python program that tracks your middle finger and sets your mouse cursor accordingly.</p>
+            </div>
+            <div class="project-item" onclick="window.location.href='https://github.com/PCTSxYupman/AreYouWorking/'">
+                <h3>AreYouWorking</h3>
+                <p>A program that tracks your face and makes sure you're looking at your screen. If not, it pops up a picture on a bright window and tells you to get back to work.</p>
+            </div>
+        </section>
+    </div>
+
+    <div class="right github-embed">
+        <iframe src="https://github.com/PCTSxYupman?tab=repositories" class="github-frame" style="height: 1200px;"></iframe>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Brennan LM. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
