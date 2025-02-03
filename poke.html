@@ -10,15 +10,16 @@
             padding: 0;
             background-color: #25AFB5;
             font-family: Arial, sans-serif;
-            color: black; /* Text color set to black */
-            height: 100vh; /* Full viewport height */
+            color: black;
+            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Align items to the top */
+            justify-content: flex-start;
+            align-items: center;
         }
 
         .top-banner {
-            width: 100vw; /* Full width of the viewport */
+            width: 100vw;
             height: 150px;
             background-color: #ff0000;
             display: flex;
@@ -30,17 +31,21 @@
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1000; /* Ensures it's always on top */
+            z-index: 1000;
         }
 
         .container {
-            flex: 1; /* Allow the container to grow and fill the remaining space */
+            margin-top: 170px; /* Offset for the fixed header */
             display: flex;
             flex-direction: column;
-            align-items: center; /* Centering children horizontally */
-            justify-content: center; /* Centering children vertically */
-            position: relative; /* Relative positioning for absolute elements inside */
-            margin-top: 150px; /* Offset for the fixed header */
+            align-items: center;
+            gap: 50px; /* Space between items */
+        }
+
+        .entry {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .circle {
@@ -52,10 +57,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute; /* Absolute positioning */
-            top: calc(50% - 20vw); /* Adjust this value to move the circle up */
-            left: 50%;
-            transform: translate(-50%, -50%); /* Center the circle horizontally */
         }
 
         .inner-circle {
@@ -69,7 +70,7 @@
         .box {
             width: 20vw;
             height: auto;
-            margin-top: 10vw; /* Space between the circle and the box */
+            margin-top: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -85,20 +86,18 @@
             margin-top: 10px;
             font-size: 2vw;
             font-weight: bold;
-            text-align: center; /* Center the text */
+            text-align: center;
         }
 
         .subtext {
             font-size: 1.5vw;
             font-weight: normal;
-            text-align: center; /* Center the subtext */
+            text-align: center;
         }
 
-        /* Responsive adjustments for smaller screens */
         @media (max-width: 768px) {
             .box {
                 width: 50vw;
-                margin-top: 20vw;
             }
 
             .description {
@@ -126,14 +125,30 @@
         Legally Distinct Monster Tracker
     </div>
     <div class="container">
-        <div class="circle">
-            <div class="inner-circle"></div>
+        <!-- First Monster Entry -->
+        <div class="entry">
+            <div class="circle">
+                <div class="inner-circle"></div>
+            </div>
+            <div class="box">
+                <img src="image1.webp" alt="Shambling Mound">
+            </div>
+            <div class="description">
+                001<br>Shambling Mound
+            </div>
         </div>
-        <div class="box">
-            <img src="image1.webp" alt="Image">
-        </div>
-        <div class="description">
-            001<br>Shambling Mound
+
+        <!-- Second Monster Entry -->
+        <div class="entry">
+            <div class="circle">
+                <div class="inner-circle"></div>
+            </div>
+            <div class="box">
+                <img src="image2.webp" alt="Dire Slime">
+            </div>
+            <div class="description">
+                002<br>Parasite from Cow
+            </div>
         </div>
     </div>
 </body>
